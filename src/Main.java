@@ -6,12 +6,15 @@ public class Main {
 
     static void primeNumsSieveEratosthenes(int n) {
 
+        //array[n] n: 0 -- n-1
+        //boolean[n+1] n: 0 -- n
+
         boolean[] prime = new boolean[n+1];
-        /// 0, 1, 2, 3, 4
-        //Arrays.fill(prime, true);
-        for (int i = 0; i < prime.length; i++) {
+        Arrays.fill(prime, true);
+        /*for (int i = 0; i < prime.length; i++) {
             prime[i] = true;
-        }
+        }*/
+        /// 0, 1, 2, 3, 4, ... , n
 
         for (int p = 2; p * p <= n; p++) {
             if (prime[p]) {
